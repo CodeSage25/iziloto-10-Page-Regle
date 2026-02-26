@@ -19,17 +19,43 @@
 
     <!-- ====== HEADER ====== -->
     <header class="header">
-      <div class="header__bg" aria-hidden="true"></div>
-      <span class="header__logo">LOTO</span>
+      <img
+        class="header__bg-img"
+        src="./assets/img/Logo_Fond loto10.png"
+        alt=""
+        aria-hidden="true"
+      />
+      <div class="header__logo-wrap">
+        <img
+          class="header__logo-img"
+          src="./assets/img/Logo_Loto10.png"
+          alt="Logo Loto 10"
+        />
+      </div>
     </header>
 
     <!-- ====== MAIN ====== -->
     <main class="page">
-      <!-- Page title -->
-      <h1 class="page__title anim">Proposition 1 : Clean &amp; Moderne</h1>
-
       <!-- ====== SECTION : GRAND JEU ====== -->
       <section class="section" aria-labelledby="grand-jeu-title">
+        <!-- Logo LOTO 10 animé -->
+        <div class="logo-animated logo-animated--loto10 anim anim--scale">
+          <img
+            src="./assets/img/Logo_Loto10.png"
+            alt=""
+            class="logo-animated__img"
+          />
+          <div class="logo-animated__letters">
+            <span class="logo-letter logo-letter--l" data-letter="L">L</span>
+            <span class="logo-letter logo-letter--o" data-letter="O">O</span>
+            <span class="logo-letter logo-letter--t" data-letter="T">T</span>
+            <span class="logo-letter logo-letter--o2" data-letter="O">O</span>
+            <span class="logo-letter logo-letter--space"></span>
+            <span class="logo-letter logo-letter--1" data-letter="1">1</span>
+            <span class="logo-letter logo-letter--0" data-letter="0">0</span>
+          </div>
+        </div>
+
         <h2 class="section__heading anim anim--left" id="grand-jeu-title">
           Joue 10 numéros de 1 à 10 — Mise unique 100 F
         </h2>
@@ -51,99 +77,322 @@
           </div>
         </div>
 
-        <!-- Carte jeu principal -->
-        <div class="card anim">
-          <div class="card__info">
-            <h3 class="card__title anim anim--left stagger-1">Règles du Jeu</h3>
-            <p class="card__text anim anim--left stagger-2">
-              Choisissez 10 numéros de 1 à 10.<br />
-              Vos gains sont calculés selon l'ordre exact de tirage. Plus vous
-              trouvez de numéros à la suite, plus vous gagnez gros&nbsp;!
-            </p>
-            <div class="card__cta anim anim--left stagger-3">
-              <strong class="card__cta-title">Joue 10 numéros de 1 à 10</strong>
-              <span class="card__cta-mise">Mise unique : 100 F</span>
-            </div>
-          </div>
+        <!-- Bloc exemples -->
+        <div class="examples-block anim">
+          <ul class="examples-list">
+            <!-- 3 ordre -->
+            <li class="examples-list__item anim anim--left stagger-1">
+              <div class="examples-list__header">
+                <span class="examples-list__bullet">•</span>
+                <span class="examples-list__label">Tu joues</span>
+              </div>
+              <div class="examples-list__balls">
+                <span class="ball mini-ball">1</span>
+                <span class="ball mini-ball highlight-ball">10</span>
+                <span class="ball mini-ball">9</span>
+                <span class="ball mini-ball highlight-ball">3</span>
+                <span class="ball mini-ball">7</span>
+                <span class="ball mini-ball">5</span>
+                <span class="ball mini-ball highlight-ball">8</span>
+                <span class="ball mini-ball">2</span>
+                <span class="ball mini-ball">4</span>
+                <span class="ball mini-ball">6</span>
+              </div>
+              <p class="examples-list__explain">
+                Tu as les <strong>3 premiers</strong> numéros tirés dans l'ordre
+                (<span class="examples-list__nums">10-3-8</span>)
+              </p>
+              <p class="examples-list__result">
+                Tu gagnes le 3 ordre →
+                <strong class="examples-list__gain">mise x 2</strong>
+              </p>
+            </li>
 
-          <div class="card__table">
-            <table class="gains" role="table">
-              <thead>
-                <tr class="anim anim--right stagger-1">
-                  <th scope="col">Ordre</th>
-                  <th scope="col" class="gains__col-right">Mise</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="anim anim--right stagger-2">
-                  <td>3 premiers</td>
-                  <td class="gains__val">x 2</td>
-                </tr>
-                <tr class="anim anim--right stagger-3">
-                  <td>4 premiers</td>
-                  <td class="gains__val">x 3</td>
-                </tr>
-                <tr class="anim anim--right stagger-4">
-                  <td>5 premiers</td>
-                  <td class="gains__val">x 10</td>
-                </tr>
-                <tr class="anim anim--right stagger-5">
-                  <td>6 premiers</td>
-                  <td class="gains__val">x 40</td>
-                </tr>
-                <tr class="anim anim--right stagger-6">
-                  <td>7 premiers</td>
-                  <td class="gains__val">x 200</td>
-                </tr>
-                <tr class="anim anim--right stagger-7">
-                  <td>8 premiers</td>
-                  <td class="gains__val">x 1 000</td>
-                </tr>
-                <tr class="anim anim--right stagger-8">
-                  <td>9 premiers</td>
-                  <td class="gains__val">x 10 000</td>
-                </tr>
-                <tr class="anim anim--right stagger-9 gains__jackpot">
-                  <td>10 numéros</td>
-                  <td class="gains__jackpot-val">Jackpot 10 Millions</td>
-                </tr>
-              </tbody>
-            </table>
-            <p class="gains__note anim anim--right stagger-10">
-              * À partager entre tous les gagnants du Jackpot
-            </p>
-          </div>
+            <!-- 4 ordre -->
+            <li class="examples-list__item anim anim--left stagger-2">
+              <div class="examples-list__header">
+                <span class="examples-list__bullet">•</span>
+                <span class="examples-list__label">Tu joues</span>
+              </div>
+              <div class="examples-list__balls">
+                <span class="ball mini-ball">7</span>
+                <span class="ball mini-ball highlight-ball">10</span>
+                <span class="ball mini-ball">5</span>
+                <span class="ball mini-ball highlight-ball">3</span>
+                <span class="ball mini-ball">2</span>
+                <span class="ball mini-ball highlight-ball">8</span>
+                <span class="ball mini-ball">1</span>
+                <span class="ball mini-ball highlight-ball">9</span>
+                <span class="ball mini-ball">4</span>
+                <span class="ball mini-ball">6</span>
+              </div>
+              <p class="examples-list__explain">
+                Tu as les <strong>4 premiers</strong> numéros tirés dans l'ordre
+                (<span class="examples-list__nums">10-3-8-9</span>)
+              </p>
+              <p class="examples-list__result">
+                Tu gagnes le 4 ordre →
+                <strong class="examples-list__gain">mise x 3</strong>
+              </p>
+            </li>
+
+            <!-- 5 ordre -->
+            <li class="examples-list__item anim anim--left stagger-3">
+              <div class="examples-list__header">
+                <span class="examples-list__bullet">•</span>
+                <span class="examples-list__label">Tu joues</span>
+              </div>
+              <div class="examples-list__balls">
+                <span class="ball mini-ball">1</span>
+                <span class="ball mini-ball">2</span>
+                <span class="ball mini-ball highlight-ball">10</span>
+                <span class="ball mini-ball">4</span>
+                <span class="ball mini-ball highlight-ball">3</span>
+                <span class="ball mini-ball highlight-ball">8</span>
+                <span class="ball mini-ball">6</span>
+                <span class="ball mini-ball highlight-ball">9</span>
+                <span class="ball mini-ball highlight-ball">7</span>
+                <span class="ball mini-ball">5</span>
+              </div>
+              <p class="examples-list__explain">
+                Tu as les <strong>5 premiers</strong> numéros tirés dans l'ordre
+                (<span class="examples-list__nums">10-3-8-9-7</span>)
+              </p>
+              <p class="examples-list__result">
+                Tu gagnes le 5 ordre →
+                <strong class="examples-list__gain">mise x 10</strong>
+              </p>
+            </li>
+
+            <!-- 6 ordre -->
+            <li class="examples-list__item anim anim--left stagger-4">
+              <div class="examples-list__header">
+                <span class="examples-list__bullet">•</span>
+                <span class="examples-list__label">Tu joues</span>
+              </div>
+              <div class="examples-list__balls">
+                <span class="ball mini-ball">4</span>
+                <span class="ball mini-ball highlight-ball">10</span>
+                <span class="ball mini-ball highlight-ball">3</span>
+                <span class="ball mini-ball">2</span>
+                <span class="ball mini-ball highlight-ball">8</span>
+                <span class="ball mini-ball highlight-ball">9</span>
+                <span class="ball mini-ball">6</span>
+                <span class="ball mini-ball highlight-ball">7</span>
+                <span class="ball mini-ball highlight-ball">1</span>
+                <span class="ball mini-ball">5</span>
+              </div>
+              <p class="examples-list__explain">
+                Tu as les <strong>6 premiers</strong> numéros tirés dans l'ordre
+                (<span class="examples-list__nums">10-3-8-9-7-1</span>)
+              </p>
+              <p class="examples-list__result">
+                Tu gagnes le 6 ordre →
+                <strong class="examples-list__gain">mise x 40</strong>
+              </p>
+            </li>
+
+            <!-- 7 ordre -->
+            <li class="examples-list__item anim anim--left stagger-5">
+              <div class="examples-list__header">
+                <span class="examples-list__bullet">•</span>
+                <span class="examples-list__label">Tu joues</span>
+              </div>
+              <div class="examples-list__balls">
+                <span class="ball mini-ball">2</span>
+                <span class="ball mini-ball">5</span>
+                <span class="ball mini-ball highlight-ball">10</span>
+                <span class="ball mini-ball highlight-ball">3</span>
+                <span class="ball mini-ball highlight-ball">8</span>
+                <span class="ball mini-ball">6</span>
+                <span class="ball mini-ball highlight-ball">9</span>
+                <span class="ball mini-ball highlight-ball">7</span>
+                <span class="ball mini-ball highlight-ball">1</span>
+                <span class="ball mini-ball highlight-ball">4</span>
+              </div>
+              <p class="examples-list__explain">
+                Tu as les <strong>7 premiers</strong> numéros tirés dans l'ordre
+                (<span class="examples-list__nums">10-3-8-9-7-1-4</span>)
+              </p>
+              <p class="examples-list__result">
+                Tu gagnes le 7 ordre →
+                <strong class="examples-list__gain">mise x 200</strong>
+              </p>
+            </li>
+
+            <!-- 8 ordre -->
+            <li class="examples-list__item anim anim--left stagger-6">
+              <div class="examples-list__header">
+                <span class="examples-list__bullet">•</span>
+                <span class="examples-list__label">Tu joues</span>
+              </div>
+              <div class="examples-list__balls">
+                <span class="ball mini-ball">6</span>
+                <span class="ball mini-ball highlight-ball">10</span>
+                <span class="ball mini-ball highlight-ball">3</span>
+                <span class="ball mini-ball highlight-ball">8</span>
+                <span class="ball mini-ball highlight-ball">9</span>
+                <span class="ball mini-ball">2</span>
+                <span class="ball mini-ball highlight-ball">7</span>
+                <span class="ball mini-ball highlight-ball">1</span>
+                <span class="ball mini-ball highlight-ball">4</span>
+                <span class="ball mini-ball highlight-ball">5</span>
+              </div>
+              <p class="examples-list__explain">
+                Tu as les <strong>8 premiers</strong> numéros tirés dans l'ordre
+                (<span class="examples-list__nums">10-3-8-9-7-1-4-5</span>)
+              </p>
+              <p class="examples-list__result">
+                Tu gagnes le 8 ordre →
+                <strong class="examples-list__gain">mise x 1 000</strong>
+              </p>
+            </li>
+
+            <!-- 9 ordre -->
+            <li class="examples-list__item anim anim--left stagger-7">
+              <div class="examples-list__header">
+                <span class="examples-list__bullet">•</span>
+                <span class="examples-list__label">Tu joues</span>
+              </div>
+              <div class="examples-list__balls">
+                <span class="ball mini-ball highlight-ball">10</span>
+                <span class="ball mini-ball highlight-ball">3</span>
+                <span class="ball mini-ball highlight-ball">8</span>
+                <span class="ball mini-ball highlight-ball">9</span>
+                <span class="ball mini-ball highlight-ball">7</span>
+                <span class="ball mini-ball highlight-ball">1</span>
+                <span class="ball mini-ball">6</span>
+                <span class="ball mini-ball highlight-ball">4</span>
+                <span class="ball mini-ball highlight-ball">5</span>
+                <span class="ball mini-ball highlight-ball">2</span>
+              </div>
+              <p class="examples-list__explain">
+                Tu as les <strong>9 premiers</strong> numéros tirés dans l'ordre
+                (<span class="examples-list__nums">10-3-8-9-7-1-4-5-2</span>)
+              </p>
+              <p class="examples-list__result">
+                Tu gagnes le 9 ordre →
+                <strong class="examples-list__gain">mise x 10 000</strong>
+              </p>
+            </li>
+
+            <!-- Jackpot -->
+            <li
+              class="examples-list__item examples-list__item--jackpot anim anim--left stagger-8"
+            >
+              <div class="examples-list__header">
+                <span
+                  class="examples-list__bullet examples-list__bullet--jackpot"
+                  >•</span
+                >
+                <span class="examples-list__label">Tu joues</span>
+              </div>
+              <div class="examples-list__balls">
+                <span
+                  class="ball mini-ball highlight-ball highlight-ball--jackpot"
+                  >10</span
+                >
+                <span
+                  class="ball mini-ball highlight-ball highlight-ball--jackpot"
+                  >3</span
+                >
+                <span
+                  class="ball mini-ball highlight-ball highlight-ball--jackpot"
+                  >8</span
+                >
+                <span
+                  class="ball mini-ball highlight-ball highlight-ball--jackpot"
+                  >9</span
+                >
+                <span
+                  class="ball mini-ball highlight-ball highlight-ball--jackpot"
+                  >7</span
+                >
+                <span
+                  class="ball mini-ball highlight-ball highlight-ball--jackpot"
+                  >1</span
+                >
+                <span
+                  class="ball mini-ball highlight-ball highlight-ball--jackpot"
+                  >4</span
+                >
+                <span
+                  class="ball mini-ball highlight-ball highlight-ball--jackpot"
+                  >5</span
+                >
+                <span
+                  class="ball mini-ball highlight-ball highlight-ball--jackpot"
+                  >2</span
+                >
+                <span
+                  class="ball mini-ball highlight-ball highlight-ball--jackpot"
+                  >6</span
+                >
+              </div>
+              <p class="examples-list__explain">
+                Tu as les <strong>10 numéros</strong> tirés dans l'ordre (<span
+                  class="examples-list__nums"
+                  >10-3-8-9-7-1-4-5-2-6</span
+                >)
+              </p>
+              <p class="examples-list__result examples-list__result--jackpot">
+                Tu gagnes le
+                <strong class="examples-list__gain examples-list__gain--jackpot"
+                  >Jackpot de 10 millions*</strong
+                >
+              </p>
+              <p class="examples-list__note">
+                * À partager entre tous les gagnants du Jackpot
+              </p>
+            </li>
+          </ul>
         </div>
       </section>
 
       <!-- ====== SECTION : VARIANTES ====== -->
       <section class="section" aria-labelledby="variantes-title">
+        <!-- Logo LOTO BONUS animé -->
+        <div class="logo-animated logo-animated--bonus anim anim--scale">
+          <img
+            src="./assets/img/Logo_LotoBONUS.png"
+            alt=""
+            class="logo-animated__img"
+          />
+          <div class="logo-animated__letters">
+            <span class="logo-letter logo-letter--l" data-letter="L">L</span>
+            <span class="logo-letter logo-letter--o" data-letter="O">O</span>
+            <span class="logo-letter logo-letter--t" data-letter="T">T</span>
+            <span class="logo-letter logo-letter--o2" data-letter="O">O</span>
+            <span class="logo-letter logo-letter--space"></span>
+            <span class="logo-letter logo-letter--b" data-letter="B">B</span>
+            <span class="logo-letter logo-letter--o3" data-letter="O">O</span>
+            <span class="logo-letter logo-letter--n" data-letter="N">N</span>
+            <span class="logo-letter logo-letter--u" data-letter="U">U</span>
+            <span class="logo-letter logo-letter--s" data-letter="S">S</span>
+          </div>
+        </div>
+
         <h2 class="section__heading anim anim--left" id="variantes-title">
-          Les Variantes (Mise 100 à 1000F)
+          Mise 100 à 1000F
         </h2>
 
         <div class="variants">
           <!-- 3/10 -->
           <article class="vcard anim anim--scale stagger-1">
-            <div class="vcard__bunting">
-              <span class="vcard__bunting-line" aria-hidden="true"></span>
-              <span class="vcard__letter letter-anim">L</span>
-              <span class="vcard__letter letter-anim">O</span>
-              <span class="vcard__letter letter-anim">T</span>
-              <span class="vcard__letter letter-anim">O</span>
-            </div>
-            <h3 class="vcard__title anim stagger-2">3 / 10</h3>
+            <img src="./assets/img/Logo_Loto_3-10.png" alt="" />
             <div class="vcard__dots">
               <i class="vcard__dot anim anim--scale stagger-3"></i>
               <i class="vcard__dot anim anim--scale stagger-4"></i>
               <i class="vcard__dot anim anim--scale stagger-5"></i>
             </div>
-            <p class="vcard__desc anim stagger-6">Choisis 3 numéros</p>
+            <p class="vcard__desc anim stagger-6">
+              Choisis 3 numéros de 1 à 10
+            </p>
             <span class="vcard__arrow anim stagger-7" aria-hidden="true"
               >▼</span
             >
             <p class="vcard__cond anim stagger-8">
-              S'ils sont tirés dans l'ordre
+              S'ils sont tirés dans l'ordre parmi les 10
             </p>
             <div class="vcard__gain anim anim--scale stagger-9">
               <span class="vcard__gain-label">Tu gagnes ta mise</span>
@@ -153,26 +402,21 @@
 
           <!-- 4/10 -->
           <article class="vcard anim anim--scale stagger-2">
-            <div class="vcard__bunting">
-              <span class="vcard__bunting-line" aria-hidden="true"></span>
-              <span class="vcard__letter letter-anim">L</span>
-              <span class="vcard__letter letter-anim">O</span>
-              <span class="vcard__letter letter-anim">T</span>
-              <span class="vcard__letter letter-anim">O</span>
-            </div>
-            <h3 class="vcard__title anim stagger-3">4 / 10</h3>
+            <img src="./assets/img/Logo_Loto_4-10.png" alt="" />
             <div class="vcard__dots">
               <i class="vcard__dot anim anim--scale stagger-4"></i>
               <i class="vcard__dot anim anim--scale stagger-5"></i>
               <i class="vcard__dot anim anim--scale stagger-6"></i>
               <i class="vcard__dot anim anim--scale stagger-7"></i>
             </div>
-            <p class="vcard__desc anim stagger-7">Choisis 4 numéros</p>
+            <p class="vcard__desc anim stagger-7">
+              Choisis 4 numéros de 1 à 10
+            </p>
             <span class="vcard__arrow anim stagger-8" aria-hidden="true"
               >▼</span
             >
             <p class="vcard__cond anim stagger-9">
-              S'ils sont tirés dans l'ordre
+              S'ils sont tirés dans l'ordre parmi les 10
             </p>
             <div class="vcard__gain anim anim--scale stagger-10">
               <span class="vcard__gain-label">Tu gagnes ta mise</span>
@@ -182,14 +426,7 @@
 
           <!-- 5/10 -->
           <article class="vcard anim anim--scale stagger-3">
-            <div class="vcard__bunting">
-              <span class="vcard__bunting-line" aria-hidden="true"></span>
-              <span class="vcard__letter letter-anim">L</span>
-              <span class="vcard__letter letter-anim">O</span>
-              <span class="vcard__letter letter-anim">T</span>
-              <span class="vcard__letter letter-anim">O</span>
-            </div>
-            <h3 class="vcard__title anim stagger-4">5 / 10</h3>
+            <img src="./assets/img/Logo_Loto_5-10.png" alt="" />
             <div class="vcard__dots">
               <i class="vcard__dot anim anim--scale stagger-5"></i>
               <i class="vcard__dot anim anim--scale stagger-6"></i>
@@ -197,12 +434,14 @@
               <i class="vcard__dot anim anim--scale stagger-8"></i>
               <i class="vcard__dot anim anim--scale stagger-9"></i>
             </div>
-            <p class="vcard__desc anim stagger-8">Choisis 5 numéros</p>
+            <p class="vcard__desc anim stagger-8">
+              Choisis 5 numéros de 1 à 10
+            </p>
             <span class="vcard__arrow anim stagger-9" aria-hidden="true"
               >▼</span
             >
             <p class="vcard__cond anim stagger-10">
-              S'ils sont tirés dans l'ordre
+              S'ils sont tirés dans l'ordre parmi les 10
             </p>
             <div class="vcard__gain anim anim--scale stagger-11">
               <span class="vcard__gain-label">Tu gagnes ta mise</span>
@@ -212,14 +451,7 @@
 
           <!-- 6/10 -->
           <article class="vcard anim anim--scale stagger-4">
-            <div class="vcard__bunting">
-              <span class="vcard__bunting-line" aria-hidden="true"></span>
-              <span class="vcard__letter letter-anim">L</span>
-              <span class="vcard__letter letter-anim">O</span>
-              <span class="vcard__letter letter-anim">T</span>
-              <span class="vcard__letter letter-anim">O</span>
-            </div>
-            <h3 class="vcard__title anim stagger-5">6 / 10</h3>
+            <img src="./assets/img/Logo_Loto_6-10.png" alt="" />
             <div class="vcard__dots">
               <i class="vcard__dot anim anim--scale stagger-6"></i>
               <i class="vcard__dot anim anim--scale stagger-7"></i>
@@ -228,12 +460,14 @@
               <i class="vcard__dot anim anim--scale stagger-10"></i>
               <i class="vcard__dot anim anim--scale stagger-11"></i>
             </div>
-            <p class="vcard__desc anim stagger-9">Choisis 6 numéros</p>
+            <p class="vcard__desc anim stagger-9">
+              Choisis 6 numéros de 1 à 10
+            </p>
             <span class="vcard__arrow anim stagger-10" aria-hidden="true"
               >▼</span
             >
             <p class="vcard__cond anim stagger-11">
-              S'ils sont tirés dans l'ordre
+              S'ils sont tirés dans l'ordre parmi les 10
             </p>
             <div class="vcard__gain anim anim--scale stagger-12">
               <span class="vcard__gain-label">Tu gagnes ta mise</span>
@@ -243,14 +477,7 @@
 
           <!-- 7/10 -->
           <article class="vcard anim anim--scale stagger-5">
-            <div class="vcard__bunting">
-              <span class="vcard__bunting-line" aria-hidden="true"></span>
-              <span class="vcard__letter letter-anim">L</span>
-              <span class="vcard__letter letter-anim">O</span>
-              <span class="vcard__letter letter-anim">T</span>
-              <span class="vcard__letter letter-anim">O</span>
-            </div>
-            <h3 class="vcard__title anim stagger-6">7 / 10</h3>
+            <img src="./assets/img/Logo_Loto_7-10.png" alt="" />
             <div class="vcard__dots">
               <i class="vcard__dot anim anim--scale stagger-7"></i>
               <i class="vcard__dot anim anim--scale stagger-8"></i>
@@ -260,12 +487,14 @@
               <i class="vcard__dot anim anim--scale stagger-12"></i>
               <i class="vcard__dot anim anim--scale stagger-12"></i>
             </div>
-            <p class="vcard__desc anim stagger-10">Choisis 7 numéros</p>
+            <p class="vcard__desc anim stagger-10">
+              Choisis 7 numéros de 1 à 10
+            </p>
             <span class="vcard__arrow anim stagger-11" aria-hidden="true"
               >▼</span
             >
             <p class="vcard__cond anim stagger-12">
-              S'ils sont tirés dans l'ordre
+              S'ils sont tirés dans l'ordre parmi les 10
             </p>
             <div class="vcard__gain anim anim--scale stagger-12">
               <span class="vcard__gain-label">Tu gagnes ta mise</span>
