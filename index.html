@@ -3,290 +3,278 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Propositions Design Loto - Animé</title>
+    <meta name="theme-color" content="#FF9800" />
+    <title>LOTO - Jeu de tirage</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress" id="scrollProgress"></div>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-    <!-- Floating Particles Background -->
-    <div class="particles-container" id="particles"></div>
+    <!-- Particles -->
+    <div class="particles" id="particles" aria-hidden="true"></div>
 
-    <!-- Confetti burst on load -->
-    <div class="confetti-container" id="confetti"></div>
+    <!-- Confetti -->
+    <div class="confetti-zone" id="confetti" aria-hidden="true"></div>
 
-    <!-- HEADER COMMUN -->
-    <div class="header-loto">
-      <div class="header-bg-rotate"></div>
-      <div class="logo-text">LOTO</div>
-    </div>
+    <!-- ====== HEADER ====== -->
+    <header class="header">
+      <div class="header__bg" aria-hidden="true"></div>
+      <span class="header__logo">LOTO</span>
+    </header>
 
-    <!-- ============================================== -->
-    <!-- PROPOSITION 1 : CLEAN & MODERNE (BLEU/JAUNE) -->
-    <!-- ============================================== -->
+    <!-- ====== MAIN ====== -->
+    <main class="page">
+      <!-- Page title -->
+      <h1 class="page__title anim">Proposition 1 : Clean &amp; Moderne</h1>
 
-    <div class="presentation-title anim">Proposition 1 : Clean & Moderne</div>
+      <!-- ====== SECTION : GRAND JEU ====== -->
+      <section class="section" aria-labelledby="grand-jeu-title">
+        <h2 class="section__heading anim anim--left" id="grand-jeu-title">
+          Joue 10 numéros de 1 à 10 — Mise unique 100 F
+        </h2>
 
-    <div class="main-container">
-      <div class="section-title anim anim-left">
-        Joue 10 numeros de 1 a 10 — Mise unique 100 F
-      </div>
-
-      <!-- BARRE DE TIRAGE -->
-      <div class="draw-strip anim anim-scale">
-        <div class="draw-label anim anim-left stagger-1">Tirage</div>
-        <div class="balls-container">
-          <div class="t-ball bg-red anim anim-scale stagger-2">10</div>
-          <div class="t-ball bg-green anim anim-scale stagger-3">3</div>
-          <div class="t-ball bg-blue anim anim-scale stagger-4">8</div>
-          <div class="t-ball bg-yellow anim anim-scale stagger-5">9</div>
-          <div class="t-ball bg-purple anim anim-scale stagger-6">7</div>
-          <div class="t-ball bg-orange anim anim-scale stagger-7">1</div>
-          <div class="t-ball bg-cyan anim anim-scale stagger-8">4</div>
-          <div class="t-ball bg-pink anim anim-scale stagger-9">5</div>
-          <div class="t-ball bg-red anim anim-scale stagger-10">2</div>
-          <div class="t-ball bg-green anim anim-scale stagger-11">6</div>
-        </div>
-      </div>
-
-      <!-- Section 1 : Le Grand Jeu -->
-      <div class="main-game-card anim">
-        <!-- Info Gauche -->
-        <div class="info-panel">
-          <h2 class="anim anim-left stagger-1">Règles du Jeu</h2>
-          <div class="info-text anim anim-left stagger-2">
-            Choisissez 10 numéros de 1 à 10.<br />
-            Vos gains sont calculés selon l'ordre exact de tirage. Plus vous
-            trouvez de numéros à la suite, plus vous gagnez gros !
-          </div>
-
-          <div class="cta-box anim anim-left stagger-3">
-            <div class="cta-title">Joue 10 numéros de 1 à 10</div>
-            <div class="cta-mise">Mise unique : 100 F</div>
+        <!-- Barre de tirage -->
+        <div class="strip anim anim--scale">
+          <span class="strip__label anim anim--left stagger-1">Tirage</span>
+          <div class="strip__balls">
+            <span class="ball ball--red anim anim--scale stagger-2">10</span>
+            <span class="ball ball--green anim anim--scale stagger-3">3</span>
+            <span class="ball ball--blue anim anim--scale stagger-4">8</span>
+            <span class="ball ball--yellow anim anim--scale stagger-5">9</span>
+            <span class="ball ball--purple anim anim--scale stagger-6">7</span>
+            <span class="ball ball--orange anim anim--scale stagger-7">1</span>
+            <span class="ball ball--cyan anim anim--scale stagger-8">4</span>
+            <span class="ball ball--pink anim anim--scale stagger-9">5</span>
+            <span class="ball ball--red anim anim--scale stagger-10">2</span>
+            <span class="ball ball--green anim anim--scale stagger-11">6</span>
           </div>
         </div>
 
-        <!-- Tableau Droite -->
-        <div class="table-panel">
-          <table class="clean-table">
-            <thead>
-              <tr class="table-row-anim anim anim-right stagger-1">
-                <th>Ordre</th>
-                <th style="text-align: right">Mise</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="table-row-anim anim anim-right stagger-2">
-                <td>3 premiers</td>
-                <td class="gain-val">x 2</td>
-              </tr>
-              <tr class="table-row-anim anim anim-right stagger-3">
-                <td>4 premiers</td>
-                <td class="gain-val">x 3</td>
-              </tr>
-              <tr class="table-row-anim anim anim-right stagger-4">
-                <td>5 premiers</td>
-                <td class="gain-val">x 10</td>
-              </tr>
-              <tr class="table-row-anim anim anim-right stagger-5">
-                <td>6 premiers</td>
-                <td class="gain-val">x 40</td>
-              </tr>
-              <tr class="table-row-anim anim anim-right stagger-6">
-                <td>7 premiers</td>
-                <td class="gain-val">x 200</td>
-              </tr>
-              <tr class="table-row-anim anim anim-right stagger-7">
-                <td>8 premiers</td>
-                <td class="gain-val">x 1 000</td>
-              </tr>
-              <tr class="table-row-anim anim anim-right stagger-8">
-                <td>9 premiers</td>
-                <td class="gain-val">x 10 000</td>
-              </tr>
-              <tr class="table-row-anim anim anim-right stagger-9 jackpot-row">
-                <td style="color: #d97706; font-weight: bold">10 numéros</td>
-                <td class="jackpot-text">Jackpot 10 Millions</td>
-              </tr>
-            </tbody>
-          </table>
-          <p
-            class="anim anim-right stagger-10"
-            style="
-              font-size: 0.7rem;
-              color: #999;
-              text-align: right;
-              margin-top: 5px;
-            "
-          >
-            * A partager entre tous les gagnants du Jackpot
-          </p>
-        </div>
-      </div>
-
-      <!-- Section 2 : Variantes -->
-      <div class="section-title anim anim-left">
-        Les Variantes (Mise 100 à 1000F)
-      </div>
-
-      <div class="variants-grid">
-        <!-- Carte 3/10 -->
-        <div class="variant-card anim anim-scale stagger-1">
-          <div class="bunting-container">
-            <div class="bunting-line"></div>
-            <div class="letter-circle letter-circle-anim">L</div>
-            <div class="letter-circle letter-circle-anim">O</div>
-            <div class="letter-circle letter-circle-anim">T</div>
-            <div class="letter-circle letter-circle-anim">O</div>
+        <!-- Carte jeu principal -->
+        <div class="card anim">
+          <div class="card__info">
+            <h3 class="card__title anim anim--left stagger-1">Règles du Jeu</h3>
+            <p class="card__text anim anim--left stagger-2">
+              Choisissez 10 numéros de 1 à 10.<br />
+              Vos gains sont calculés selon l'ordre exact de tirage. Plus vous
+              trouvez de numéros à la suite, plus vous gagnez gros&nbsp;!
+            </p>
+            <div class="card__cta anim anim--left stagger-3">
+              <strong class="card__cta-title">Joue 10 numéros de 1 à 10</strong>
+              <span class="card__cta-mise">Mise unique : 100 F</span>
+            </div>
           </div>
 
-          <div class="v-title anim stagger-2">3 / 10</div>
-          <div class="visual-dots">
-            <div class="dot anim anim-scale stagger-3"></div>
-            <div class="dot anim anim-scale stagger-4"></div>
-            <div class="dot anim anim-scale stagger-5"></div>
-          </div>
-
-          <div class="text-white anim stagger-6">Choisis 3 numéros</div>
-          <div class="arrow-icon anim stagger-7">▼</div>
-          <div class="text-cond anim stagger-8">
-            S'ils sont tirés dans l'ordre
-          </div>
-
-          <div class="gain-box anim anim-scale stagger-9">
-            <div class="gain-label">Tu gagnes ta mise</div>
-            <div class="gain-big">x4</div>
+          <div class="card__table">
+            <table class="gains" role="table">
+              <thead>
+                <tr class="anim anim--right stagger-1">
+                  <th scope="col">Ordre</th>
+                  <th scope="col" class="gains__col-right">Mise</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="anim anim--right stagger-2">
+                  <td>3 premiers</td>
+                  <td class="gains__val">x 2</td>
+                </tr>
+                <tr class="anim anim--right stagger-3">
+                  <td>4 premiers</td>
+                  <td class="gains__val">x 3</td>
+                </tr>
+                <tr class="anim anim--right stagger-4">
+                  <td>5 premiers</td>
+                  <td class="gains__val">x 10</td>
+                </tr>
+                <tr class="anim anim--right stagger-5">
+                  <td>6 premiers</td>
+                  <td class="gains__val">x 40</td>
+                </tr>
+                <tr class="anim anim--right stagger-6">
+                  <td>7 premiers</td>
+                  <td class="gains__val">x 200</td>
+                </tr>
+                <tr class="anim anim--right stagger-7">
+                  <td>8 premiers</td>
+                  <td class="gains__val">x 1 000</td>
+                </tr>
+                <tr class="anim anim--right stagger-8">
+                  <td>9 premiers</td>
+                  <td class="gains__val">x 10 000</td>
+                </tr>
+                <tr class="anim anim--right stagger-9 gains__jackpot">
+                  <td>10 numéros</td>
+                  <td class="gains__jackpot-val">Jackpot 10 Millions</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="gains__note anim anim--right stagger-10">
+              * À partager entre tous les gagnants du Jackpot
+            </p>
           </div>
         </div>
+      </section>
 
-        <!-- Carte 4/10 -->
-        <div class="variant-card anim anim-scale stagger-3">
-          <div class="bunting-container">
-            <div class="bunting-line"></div>
-            <div class="letter-circle letter-circle-anim">L</div>
-            <div class="letter-circle letter-circle-anim">O</div>
-            <div class="letter-circle letter-circle-anim">T</div>
-            <div class="letter-circle letter-circle-anim">O</div>
-          </div>
+      <!-- ====== SECTION : VARIANTES ====== -->
+      <section class="section" aria-labelledby="variantes-title">
+        <h2 class="section__heading anim anim--left" id="variantes-title">
+          Les Variantes (Mise 100 à 1000F)
+        </h2>
 
-          <div class="v-title anim stagger-4">4 / 10</div>
-          <div class="visual-dots">
-            <div class="dot anim anim-scale stagger-5"></div>
-            <div class="dot anim anim-scale stagger-6"></div>
-            <div class="dot anim anim-scale stagger-7"></div>
-            <div class="dot anim anim-scale stagger-8"></div>
-          </div>
+        <div class="variants">
+          <!-- 3/10 -->
+          <article class="vcard anim anim--scale stagger-1">
+            <div class="vcard__bunting">
+              <span class="vcard__bunting-line" aria-hidden="true"></span>
+              <span class="vcard__letter letter-anim">L</span>
+              <span class="vcard__letter letter-anim">O</span>
+              <span class="vcard__letter letter-anim">T</span>
+              <span class="vcard__letter letter-anim">O</span>
+            </div>
+            <h3 class="vcard__title anim stagger-2">3 / 10</h3>
+            <div class="vcard__dots">
+              <i class="vcard__dot anim anim--scale stagger-3"></i>
+              <i class="vcard__dot anim anim--scale stagger-4"></i>
+              <i class="vcard__dot anim anim--scale stagger-5"></i>
+            </div>
+            <p class="vcard__desc anim stagger-6">Choisis 3 numéros</p>
+            <span class="vcard__arrow anim stagger-7" aria-hidden="true"
+              >▼</span
+            >
+            <p class="vcard__cond anim stagger-8">
+              S'ils sont tirés dans l'ordre
+            </p>
+            <div class="vcard__gain anim anim--scale stagger-9">
+              <span class="vcard__gain-label">Tu gagnes ta mise</span>
+              <span class="vcard__gain-value" data-target="4">x4</span>
+            </div>
+          </article>
 
-          <div class="text-white anim stagger-8">Choisis 4 numéros</div>
-          <div class="arrow-icon anim stagger-9">▼</div>
-          <div class="text-cond anim stagger-10">
-            S'ils sont tirés dans l'ordre
-          </div>
+          <!-- 4/10 -->
+          <article class="vcard anim anim--scale stagger-2">
+            <div class="vcard__bunting">
+              <span class="vcard__bunting-line" aria-hidden="true"></span>
+              <span class="vcard__letter letter-anim">L</span>
+              <span class="vcard__letter letter-anim">O</span>
+              <span class="vcard__letter letter-anim">T</span>
+              <span class="vcard__letter letter-anim">O</span>
+            </div>
+            <h3 class="vcard__title anim stagger-3">4 / 10</h3>
+            <div class="vcard__dots">
+              <i class="vcard__dot anim anim--scale stagger-4"></i>
+              <i class="vcard__dot anim anim--scale stagger-5"></i>
+              <i class="vcard__dot anim anim--scale stagger-6"></i>
+              <i class="vcard__dot anim anim--scale stagger-7"></i>
+            </div>
+            <p class="vcard__desc anim stagger-7">Choisis 4 numéros</p>
+            <span class="vcard__arrow anim stagger-8" aria-hidden="true"
+              >▼</span
+            >
+            <p class="vcard__cond anim stagger-9">
+              S'ils sont tirés dans l'ordre
+            </p>
+            <div class="vcard__gain anim anim--scale stagger-10">
+              <span class="vcard__gain-label">Tu gagnes ta mise</span>
+              <span class="vcard__gain-value" data-target="15">x15</span>
+            </div>
+          </article>
 
-          <div class="gain-box anim anim-scale stagger-11">
-            <div class="gain-label">Tu gagnes ta mise</div>
-            <div class="gain-big">x15</div>
-          </div>
+          <!-- 5/10 -->
+          <article class="vcard anim anim--scale stagger-3">
+            <div class="vcard__bunting">
+              <span class="vcard__bunting-line" aria-hidden="true"></span>
+              <span class="vcard__letter letter-anim">L</span>
+              <span class="vcard__letter letter-anim">O</span>
+              <span class="vcard__letter letter-anim">T</span>
+              <span class="vcard__letter letter-anim">O</span>
+            </div>
+            <h3 class="vcard__title anim stagger-4">5 / 10</h3>
+            <div class="vcard__dots">
+              <i class="vcard__dot anim anim--scale stagger-5"></i>
+              <i class="vcard__dot anim anim--scale stagger-6"></i>
+              <i class="vcard__dot anim anim--scale stagger-7"></i>
+              <i class="vcard__dot anim anim--scale stagger-8"></i>
+              <i class="vcard__dot anim anim--scale stagger-9"></i>
+            </div>
+            <p class="vcard__desc anim stagger-8">Choisis 5 numéros</p>
+            <span class="vcard__arrow anim stagger-9" aria-hidden="true"
+              >▼</span
+            >
+            <p class="vcard__cond anim stagger-10">
+              S'ils sont tirés dans l'ordre
+            </p>
+            <div class="vcard__gain anim anim--scale stagger-11">
+              <span class="vcard__gain-label">Tu gagnes ta mise</span>
+              <span class="vcard__gain-value" data-target="75">x75</span>
+            </div>
+          </article>
+
+          <!-- 6/10 -->
+          <article class="vcard anim anim--scale stagger-4">
+            <div class="vcard__bunting">
+              <span class="vcard__bunting-line" aria-hidden="true"></span>
+              <span class="vcard__letter letter-anim">L</span>
+              <span class="vcard__letter letter-anim">O</span>
+              <span class="vcard__letter letter-anim">T</span>
+              <span class="vcard__letter letter-anim">O</span>
+            </div>
+            <h3 class="vcard__title anim stagger-5">6 / 10</h3>
+            <div class="vcard__dots">
+              <i class="vcard__dot anim anim--scale stagger-6"></i>
+              <i class="vcard__dot anim anim--scale stagger-7"></i>
+              <i class="vcard__dot anim anim--scale stagger-8"></i>
+              <i class="vcard__dot anim anim--scale stagger-9"></i>
+              <i class="vcard__dot anim anim--scale stagger-10"></i>
+              <i class="vcard__dot anim anim--scale stagger-11"></i>
+            </div>
+            <p class="vcard__desc anim stagger-9">Choisis 6 numéros</p>
+            <span class="vcard__arrow anim stagger-10" aria-hidden="true"
+              >▼</span
+            >
+            <p class="vcard__cond anim stagger-11">
+              S'ils sont tirés dans l'ordre
+            </p>
+            <div class="vcard__gain anim anim--scale stagger-12">
+              <span class="vcard__gain-label">Tu gagnes ta mise</span>
+              <span class="vcard__gain-value" data-target="450">x450</span>
+            </div>
+          </article>
+
+          <!-- 7/10 -->
+          <article class="vcard anim anim--scale stagger-5">
+            <div class="vcard__bunting">
+              <span class="vcard__bunting-line" aria-hidden="true"></span>
+              <span class="vcard__letter letter-anim">L</span>
+              <span class="vcard__letter letter-anim">O</span>
+              <span class="vcard__letter letter-anim">T</span>
+              <span class="vcard__letter letter-anim">O</span>
+            </div>
+            <h3 class="vcard__title anim stagger-6">7 / 10</h3>
+            <div class="vcard__dots">
+              <i class="vcard__dot anim anim--scale stagger-7"></i>
+              <i class="vcard__dot anim anim--scale stagger-8"></i>
+              <i class="vcard__dot anim anim--scale stagger-9"></i>
+              <i class="vcard__dot anim anim--scale stagger-10"></i>
+              <i class="vcard__dot anim anim--scale stagger-11"></i>
+              <i class="vcard__dot anim anim--scale stagger-12"></i>
+              <i class="vcard__dot anim anim--scale stagger-12"></i>
+            </div>
+            <p class="vcard__desc anim stagger-10">Choisis 7 numéros</p>
+            <span class="vcard__arrow anim stagger-11" aria-hidden="true"
+              >▼</span
+            >
+            <p class="vcard__cond anim stagger-12">
+              S'ils sont tirés dans l'ordre
+            </p>
+            <div class="vcard__gain anim anim--scale stagger-12">
+              <span class="vcard__gain-label">Tu gagnes ta mise</span>
+              <span class="vcard__gain-value" data-target="3000">x3000</span>
+            </div>
+          </article>
         </div>
-
-        <!-- Carte 5/10 -->
-        <div class="variant-card anim anim-scale stagger-5">
-          <div class="bunting-container">
-            <div class="bunting-line"></div>
-            <div class="letter-circle letter-circle-anim">L</div>
-            <div class="letter-circle letter-circle-anim">O</div>
-            <div class="letter-circle letter-circle-anim">T</div>
-            <div class="letter-circle letter-circle-anim">O</div>
-          </div>
-
-          <div class="v-title anim stagger-6">5 / 10</div>
-          <div class="visual-dots">
-            <div class="dot anim anim-scale stagger-7"></div>
-            <div class="dot anim anim-scale stagger-8"></div>
-            <div class="dot anim anim-scale stagger-9"></div>
-            <div class="dot anim anim-scale stagger-10"></div>
-            <div class="dot anim anim-scale stagger-11"></div>
-          </div>
-
-          <div class="text-white anim stagger-9">Choisis 5 numéros</div>
-          <div class="arrow-icon anim stagger-10">▼</div>
-          <div class="text-cond anim stagger-11">
-            S'ils sont tirés dans l'ordre
-          </div>
-
-          <div class="gain-box anim anim-scale stagger-12">
-            <div class="gain-label">Tu gagnes ta mise</div>
-            <div class="gain-big">x75</div>
-          </div>
-        </div>
-
-        <!-- Carte 6/10 -->
-        <div class="variant-card anim anim-scale stagger-7">
-          <div class="bunting-container">
-            <div class="bunting-line"></div>
-            <div class="letter-circle letter-circle-anim">L</div>
-            <div class="letter-circle letter-circle-anim">O</div>
-            <div class="letter-circle letter-circle-anim">T</div>
-            <div class="letter-circle letter-circle-anim">O</div>
-          </div>
-
-          <div class="v-title anim stagger-8">6 / 10</div>
-          <div class="visual-dots">
-            <div class="dot anim anim-scale stagger-9"></div>
-            <div class="dot anim anim-scale stagger-10"></div>
-            <div class="dot anim anim-scale stagger-11"></div>
-            <div class="dot anim anim-scale stagger-12"></div>
-            <div class="dot anim anim-scale stagger-11"></div>
-            <div class="dot anim anim-scale stagger-12"></div>
-          </div>
-
-          <div class="text-white anim stagger-10">Choisis 6 numéros</div>
-          <div class="arrow-icon anim stagger-11">▼</div>
-          <div class="text-cond anim stagger-12">
-            S'ils sont tirés dans l'ordre
-          </div>
-
-          <div class="gain-box anim anim-scale stagger-12">
-            <div class="gain-label">Tu gagnes ta mise</div>
-            <div class="gain-big">x450</div>
-          </div>
-        </div>
-
-        <!-- Carte 7/10 -->
-        <div class="variant-card anim anim-scale stagger-9">
-          <div class="bunting-container">
-            <div class="bunting-line"></div>
-            <div class="letter-circle letter-circle-anim">L</div>
-            <div class="letter-circle letter-circle-anim">O</div>
-            <div class="letter-circle letter-circle-anim">T</div>
-            <div class="letter-circle letter-circle-anim">O</div>
-          </div>
-
-          <div class="v-title anim stagger-10">7 / 10</div>
-          <div class="visual-dots">
-            <div class="dot anim anim-scale stagger-11"></div>
-            <div class="dot anim anim-scale stagger-12"></div>
-            <div class="dot anim anim-scale stagger-11"></div>
-            <div class="dot anim anim-scale stagger-12"></div>
-            <div class="dot anim anim-scale stagger-11"></div>
-            <div class="dot anim anim-scale stagger-12"></div>
-            <div class="dot anim anim-scale stagger-12"></div>
-          </div>
-
-          <div class="text-white anim stagger-11">Choisis 7 numéros</div>
-          <div class="arrow-icon anim stagger-12">▼</div>
-          <div class="text-cond anim stagger-12">
-            S'ils sont tirés dans l'ordre
-          </div>
-
-          <div class="gain-box anim anim-scale stagger-12">
-            <div class="gain-label">Tu gagnes ta mise</div>
-            <div class="gain-big">x3000</div>
-          </div>
-        </div>
-      </div>
-    </div>
+      </section>
+    </main>
 
     <script src="index.js"></script>
   </body>
