@@ -245,7 +245,7 @@ button {
   margin-inline: auto;
   overflow: hidden;
   margin-block-end: var(--space-s);
-  border-radius: 15px;
+  border-radius: 15px 15px 0 0;
 }
 .header__bg {
   display: none;
