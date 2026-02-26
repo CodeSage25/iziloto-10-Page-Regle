@@ -524,7 +524,13 @@ button {
 .section {
   margin-block-end: var(--space-xl);
 }
-
+/* Centrer les headings des deux sections */
+.section__heading {
+  justify-content: center;
+  text-align: center;
+  border-inline-start: none;
+  border-block-end: 4px solid var(--c-primary);
+}
 .section__heading {
   font-size: var(--fs-s);
   font-weight: 800;
