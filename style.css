@@ -540,9 +540,8 @@ button {
   align-items: center;
   min-block-size: 36px;
 }
-
 /* ============================================================
-   DRAW STRIP
+   DRAW STRIP — tout sur une ligne
    ============================================================ */
 .strip {
   background-color: var(--c-primary);
@@ -551,25 +550,41 @@ button {
   border-block-end: 4px solid var(--c-primary-dark);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: var(--space-s);
-  padding: var(--space-m) var(--space-s);
+  justify-content: center;
+  gap: clamp(4px, 1.5vw, 8px);
+  padding: var(--space-s) var(--space-xs);
 }
+
 .strip__label {
   color: var(--c-white);
-  font-size: var(--fs-l);
+  font-size: clamp(0.6rem, 2.5vw, 0.85rem);
   font-weight: 900;
   text-transform: uppercase;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-}
-.strip__balls {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: clamp(3px, 1.2vw, 6px);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
+.strip__balls {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: clamp(2px, 0.6vw, 4px);
+}
+
+/* Boules du strip — taille réduite pour tenir sur 1 ligne */
+.strip .ball {
+  --ball-size: clamp(24px, 6.5vw, 32px);
+  inline-size: var(--ball-size);
+  block-size: var(--ball-size);
+  font-size: clamp(0.55rem, 1.8vw, 0.8rem);
+  border-width: 1.5px;
+  box-shadow:
+    inset -2px -2px 4px rgba(0, 0, 0, 0.3),
+    1px 1px 3px rgba(0, 0, 0, 0.2);
+}
 /* ============================================================
    BALLS
    ============================================================ */
