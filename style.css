@@ -1085,8 +1085,8 @@ li:nth-child(8) h2 {
   color: #7d4e24;
 }
 .ball {
-  width: 34px;
-  height: 34px;
+  /* width: 34px;
+  height: 34px; */
   border-radius: 50%;
   /* display: flex; */
   align-items: center;
