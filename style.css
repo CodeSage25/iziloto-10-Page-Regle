@@ -341,7 +341,6 @@ button {
     color 0.3s;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  /* Each letter covers part of the image text */
   padding: 0 clamp(1px, 0.3vw, 2px);
 }
 
@@ -982,10 +981,191 @@ button {
     opacity: 1;
     transform: none;
   }
-  body {
+  /* body {
     background: white;
-  }
+  } */
   .header__bg-img {
     animation: none;
   }
+}
+/* ============================================
+   TITRE H1
+   ============================================ */
+h1 {
+  background: #be1622;
+  color: #ffffff;
+  padding: 18px 50px;
+  border-radius: 14px;
+  text-align: center;
+  letter-spacing: 6px;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 25px rgba(190, 22, 34, 0.5);
+}
+ul {
+  list-style: none;
+  width: 100%;
+  max-width: 900px;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+}
+/* ============================================
+   ANIMATION APPARITION PROGRESSIVE
+   ============================================ */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* ============================================
+   LI — Ligne générale
+   ============================================ */
+li {
+  /* display: flex; */
+  flex-wrap: nowrap;
+  align-items: stretch;
+  /* border: 2px solid #000000;
+  border-radius: 18px; */
+  overflow: hidden;
+  background: #ffffff;
+  opacity: 0;
+  animation: fadeSlideIn 0.6s ease-out forwards;
+  margin-bottom: 10px;
+}
+
+/* ============================================
+   COLONNE 1 — RANG (h2) — width adaptable
+   ============================================ */
+li h2 {
+  /* display: flex; */
+  /* align-items: center; */
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  padding: 8px 14px;
+  background: rgba(0, 0, 0, 0.04);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  /* Pas de width fixe : le contenu dicte la largeur */
+}
+/* Couleurs par rang */
+li:nth-child(1) h2 {
+  color: #009fe3;
+}
+li:nth-child(2) h2 {
+  color: #3aaa35;
+}
+li:nth-child(3) h2 {
+  color: #e6007e;
+}
+li:nth-child(4) h2 {
+  color: #e6332a;
+}
+li:nth-child(5) h2 {
+  color: #f39200;
+}
+li:nth-child(6) h2 {
+  color: #36a9e1;
+}
+li:nth-child(7) h2 {
+  color: #951b81;
+}
+li:nth-child(8) h2 {
+  color: #7d4e24;
+}
+.ball {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 13px;
+  flex-shrink: 1;
+  min-width: 20px;
+  min-height: 20px;
+  aspect-ratio: 1 / 1;
+  box-shadow:
+    inset 0 -3px 5px rgba(0, 0, 0, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+/* Couleurs des boules par data-num */
+.ball[data-num="1"] {
+  background: #e6332a;
+}
+.ball[data-num="2"] {
+  background: #3aaa35;
+}
+.ball[data-num="3"] {
+  background: #009fe3;
+}
+.ball[data-num="4"] {
+  background: #f39200;
+}
+.ball[data-num="5"] {
+  background: #951b81;
+}
+.ball[data-num="6"] {
+  background: #ffd700;
+  color: #333;
+  text-shadow: none;
+}
+.ball[data-num="7"] {
+  background: #e6007e;
+}
+.ball[data-num="8"] {
+  background: #1b5e20;
+}
+.ball[data-num="9"] {
+  background: #4a148c;
+}
+.ball[data-num="10"] {
+  background: #d84315;
+}
+/* Fond coloré diagonal via ::before — couvre tout le span + déborde à gauche */
+li span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 0 7px 7px 0;
+  transform: skewX(-12deg);
+  transform-origin: bottom left;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 22px;
+    padding: 14px 30px;
+    letter-spacing: 4px;
+    border-radius: 12px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 16px;
+    padding: 12px 18px;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+  }
+}
+span {
+  font-weight: bold;
 }
